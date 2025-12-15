@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BillMinderApp.AddBill"
+             Title="  "
+             BackgroundColor="White">
+    
+    <ScrollView>
+        <VerticalStackLayout
+    Padding="30,0"
+    Spacing="25">
+
+            <!-- Header  -->
+            <Grid Grid.Row="0" ColumnSpacing="10">
+                <Label  Text="Add Bill"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="0,10" />
+                <Button Text="Save"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    BackgroundColor="#FF69B4"
+                    TextColor="White"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    Clicked="OnSaveRecord" />
+            </Grid>
+
+            <!-- Form Fields -->
+            <StackLayout Grid.Row="1" Spacing="15">
+
+                <!-- Bill Name -->
+                <Frame Padding="10" BackgroundColor="#D9D9D9" CornerRadius="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="one.png"
+                           WidthRequest="30"
+                           HeightRequest="30" />
+                        <VerticalStackLayout>
+                            <Label Text= " Bill Name:" FontAttributes="Bold" />
+                            <Entry x:Name="outputBillName" Placeholder="Bill Name        "/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Amount -->
+                <Frame Padding="10" BackgroundColor="#D9D9D9" CornerRadius="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="two.png"
+                           WidthRequest="30"
+                           HeightRequest="30" />
+                        <VerticalStackLayout>
+                            <Label Text=" Amount:" FontAttributes="Bold" />
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="RM" VerticalTextAlignment="Center" FontAttributes="Bold" />
+                                <Entry x:Name="outputAmount" Placeholder="No Amount" Keyboard="Numeric" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Category -->
+                <Frame Padding="10" BackgroundColor="#D9D9D9" CornerRadius="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="three.png"
+                                   WidthRequest="30"
+                                   HeightRequest="30" />
+                        <VerticalStackLayout>
+                            <Label Text=" Category:" FontAttributes="Bold" />
+                            <Picker x:Name="outputCategory" 
+                                Title="Select Category">
+                                <Picker.Items>
+                                    <x:String>Installment</x:String>
+                                    <x:String>Utilities</x:String>
+                                    <x:String>Entertainment</x:String>
+                                    <x:String>Uncategorized</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Due Date -->
+                <Frame Padding="10" BackgroundColor="#D9D9D9" CornerRadius="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="four.png"
+                           WidthRequest="30"
+                           HeightRequest="30" />
+                        <VerticalStackLayout>
+                            <Label Text=" Due Date:" FontAttributes="Bold" />
+                            <DatePicker x:Name="selectDate" Format="dd/MM/yyyy" DateSelected="onDatePickerSelected" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Repeat -->
+                <Frame Padding="10" BackgroundColor="#D9D9D9" CornerRadius="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="five.png"
+                       WidthRequest="30"
+                       HeightRequest="30" />
+                        <VerticalStackLayout>
+                            <Label Text=" Repeat:" FontAttributes="Bold" />
+                            <Picker x:Name="outputRepeat" 
+                                Title="No Repeat">
+                                <Picker.Items>
+                                    <x:String>Daily</x:String>
+                                    <x:String>Weekly</x:String>
+                                    <x:String>Monthly</x:String>
+                                    <x:String>Yearly</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Note -->
+                <Frame Padding="10" BackgroundColor="#D9D9D9" CornerRadius="8">
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="six.png"
+                            WidthRequest="30"
+                            HeightRequest="30" />
+                        <VerticalStackLayout>
+                            <Label Text=" Note:" FontAttributes="Bold" />
+                            <Editor x:Name="outputNote" Placeholder="Enter notes here..." AutoSize="TextChanges" HeightRequest="100"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+            </StackLayout>
+
+        </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>

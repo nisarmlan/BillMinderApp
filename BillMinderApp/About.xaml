@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BillMinderApp.About"
+             Title="  "
+            BackgroundColor="White">
+
+    <VerticalStackLayout
+    Padding="30,0"
+    Spacing="25">
+
+        <!-- Header -->
+        <Label Text="About"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Margin="0,10" />
+
+        <!-- App Version -->
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="BillMinder Overview"
+           FontSize="20"
+           FontAttributes="Bold"
+           TextColor="Black"
+           HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="#F5F5F5" CornerRadius="10" Padding="15">
+                <Label FontSize="14"
+               TextColor="#3B82F6"
+               Text="BillMinderApp helps users track and manage their upcoming bills with ease. It offers features like reminders, bill details, and a user-friendly interface." />
+            </Frame>
+
+            <Label Text="Key Features:"
+           FontSize="18"
+           FontAttributes="Bold"
+           TextColor="Black" />
+
+            <StackLayout Spacing="5">
+                <Label Text="• Dashboard: View the next bill, amount, and due date, with an option to add new bills."
+               FontSize="14"
+               TextColor="#4B5563" />
+                <Label Text="• Next Bill: Highlights the nearest due bill or shows a default message if none are due."
+               FontSize="14"
+               TextColor="#4B5563" />
+                <Label Text="• Bills List: Displays all bills with details like name, category, amount, and due date."
+               FontSize="14"
+               TextColor="#4B5563" />
+                <Label Text="• Add Bill: Easily add new bills with key details like name, amount, and due date."
+               FontSize="14"
+               TextColor="#4B5563" />
+                <Label Text="• Firebase Integration: Syncs and stores data for reliable updates."
+               FontSize="14"
+               TextColor="#4B5563" />
+                <Label Text="• Simple UI: Clean, user-friendly design for ease of use."
+               FontSize="14"
+               TextColor="#4B5563" />
+            </StackLayout>
+        </StackLayout>
+
+
+        <!-- Divider -->
+        <BoxView HeightRequest="1"
+                BackgroundColor="Gray"
+                VerticalOptions="Center"
+                Margin="0,15" />
+
+        <!-- Developer Section -->
+        <StackLayout>
+            <Label Text="Developer"
+                FontSize="16"
+                FontAttributes="Bold"
+                TextColor="Black" />
+            <Label Text="Khairunnisa’ Ramlan"
+                FontSize="16"
+                TextColor="#3B82F6"/>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
